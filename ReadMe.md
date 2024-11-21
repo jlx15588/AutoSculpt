@@ -1,6 +1,6 @@
 <div align="center">
 <h2>Towards Any Structural Pruning</h2>
-<img src="assets/model.png" alt=""/>
+<img src="assets/model.png" alt="" width="80%"/>
 </div>
 
 AutoSculpt, a pattern-based automated pruning framework designed to enhance efficiency 
