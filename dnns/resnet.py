@@ -58,6 +58,7 @@ class ResNet(nn.Module):
     def __init__(self, name, block, num_blocks, num_classes=10):
         super(ResNet, self).__init__()
         self.name = name
+        self.action = []
         self.num_blocks = num_blocks
         self.in_planes = 16
 
@@ -102,6 +103,7 @@ class TorchResNet(nn.Module):
     def __init__(self, name, weights):
         super(TorchResNet, self).__init__()
         self.name = name
+        self.action = []
         self.model = models.resnet50(weights=weights)
 
     def forward(self, x):

@@ -7,6 +7,7 @@ class VGG16(nn.Module):
     def __init__(self, name, weights):
         super(VGG16, self).__init__()
         self.name = name
+        self.action = []
         self.model = models.vgg16(weights=weights)
 
     def forward(self, x):
@@ -27,6 +28,7 @@ class VGG19(nn.Module):
     def __init__(self, name):
         super(VGG19, self).__init__()
         self.name = name
+        self.action = []
         self.model = models.vgg19()
         self.classifier = nn.Sequential(
             nn.Linear(in_features=1000, out_features=100)

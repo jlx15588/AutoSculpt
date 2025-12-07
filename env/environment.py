@@ -69,6 +69,10 @@ class Environment:
 
             if accuracy > self.best_accuracy:
                 self.best_accuracy = accuracy
+
+                # 保存该DNN的模式，用于后续微调做掩码用
+                self.pruned_dnn.action = action
+
                 if self.rank is not None and self.rank == 0:
                     save_weights(self.path, self.pruned_dnn, self.best_accuracy)
                 else:

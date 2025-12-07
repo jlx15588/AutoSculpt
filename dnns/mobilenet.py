@@ -28,6 +28,7 @@ class MobileNet(nn.Module):
     def __init__(self, name, n_class):
         super(MobileNet, self).__init__()
         self.name = name
+        self.action = []
 
         in_planes = 32
         cfg = [64, (128, 2), 128, (256, 2), 256, (512, 2), 512, 512, 512, 512, 512, (1024, 2), 1024]
@@ -89,6 +90,7 @@ class MobileNetV2(nn.Module):
     def __init__(self, name, weights):
         super(MobileNetV2, self).__init__()
         self.name = name
+        self.action = []
         self.model = models.mobilenet_v2(weights=weights)
 
     def forward(self, x):

@@ -32,6 +32,7 @@ class VGG(nn.Module):
             cfg = defaultcfg[depth]
 
         self.name = name
+        self.action = []
         self.feature = self.make_layers(cfg, True)
         self.dataset = dataset
         if dataset == 'cifar10' or dataset == 'cinic-10':

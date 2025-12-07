@@ -6,6 +6,7 @@ class ViT_B_16(nn.Module):
     def __init__(self, name, weights):
         super(ViT_B_16, self).__init__()
         self.name = name
+        self.action = []
         self.model = models.vit_b_16(weights=weights)
 
     def forward(self, x):
